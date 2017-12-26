@@ -293,11 +293,11 @@ BOOL CreateTrampolineFunction(PTRAMPOLINE ct)
         {
             return FALSE;
         }
-
+        /*
         // Can we place the long jump above the function?
         if (!IsExecutableAddress((LPBYTE)ct->pTarget - sizeof(JMP_REL)))
             return FALSE;
-
+            */
         if (!IsCodePadding((LPBYTE)ct->pTarget - sizeof(JMP_REL), sizeof(JMP_REL)))
             return FALSE;
 
